@@ -1,14 +1,15 @@
 module DisjointSet
 
   ####### Tip ####################
-  # 0. Think of "Common Elements" finding with this disjoint sets.
+  # 0. DisjointSet helps in finding relationship between elements
   # 1. Create Node for each set value
   # 2. For Union Function
   #      A. Increase any of root's Rank value by 1 if rank(root(A)) == rank(root(B))
   #      B. Point root(B).parent --> root(A) If rank(root(A)) > rank(root(B)) 
   #      C. Point root(A).parent --> root(B) If rank(root(A)) < rank(root(B)) 
   # 3. Return root value of node for find_set method.
-  
+  ################################
+
   class Node
     attr_accessor :data, :parent, :rank
 
@@ -18,8 +19,6 @@ module DisjointSet
       @rank   = rank
     end
   end
-
-  ################################
 
   class DisjointSet
     attr_accessor :total_sets
